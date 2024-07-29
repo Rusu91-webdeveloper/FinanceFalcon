@@ -12,7 +12,7 @@ const DB_URI = process.env.DB;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: ["https://finance-falcon-api.vercel.app"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true,
   })
