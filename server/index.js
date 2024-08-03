@@ -10,13 +10,14 @@ const app = express();
 const DB_URI = process.env.DB;
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://finance-falcon-api.vercel.app"],
-    methods: ["POST", "GET", "DELETE", "PUT"],
-    credentials: true,
-  })
-);
+app.use(cors())
+// app.use(
+ // cors({
+   // origin: ["https://finance-falcon-api.vercel.app"],
+   // methods: ["POST", "GET", "DELETE", "PUT"],
+   // credentials: true,
+ // })
+//);
 
 // ROUTER
 app.use("/financial-records", formRouter);
